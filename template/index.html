@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+var subjectObject = {
+  "Phone": {'samsung': ['samsung-galaxy-j7',
+  'samsung-galaxy-a3-2016',
+  'samsung-galaxy-note-4',
+  'samsung-galaxy-e5',
+  'samsung-galaxy-e7',
+  'samsung-galaxy-s7-789999',
+  'samsung-galaxy-s6',
+  'samsung-galaxy-a9-pro-dual-sm-a9100',
+  'samsung-galaxy-a7-2016',
+  'samsung-galaxy-grand-max',
+  'samsung-galaxy-s5',
+  'samsung-galaxy-j1-2016-4-5-sm-j120',
+  'samsung-galaxy-j5-4g-lte-5-2-inches',
+  'samsung-galaxy-a9',
+  'samsung-galaxy-s6-active-sm-g890',
+  'samsung-galaxy-j7-prime',
+  'samsung-galaxy-s6-edgeplus',
+  'samsung-galaxy-alpha',
+  'samsung-galaxy-s7-active',
+  'samsung-galaxy-j5-prime-sm-g570f',
+  'samsung-galaxy-s8',
+  'samsung-galaxy-s5-active-g870',
+  'samsung-galaxy-a7',
+  'samsung-galaxy-c7',
+  'samsung-galaxy-s7-edge',
+  'samsung-galaxy-note-edge',
+  'samsung-galaxy-j5',
+  'samsung-galaxy-j7-2016',
+  'samsung-galaxy-a5',
+  'samsung-galaxy-s5-sport-sm-g860p',
+  'samsung-galaxy-s8-plus',
+  'samsung-galaxy-a3-819970',
+  'samsung-galaxy-s5-neo-sm-g903f',
+  'samsung-galaxy-s6-edge-sm-g925f',
+  'samsung-galaxy-a5-2016',
+  'samsung-galaxy-grand-prime',
+  'samsung-galaxy-a5-2017',
+  'samsung-galaxy-on7',
+  'samsung-galaxy-a3',
+  'samsung-z',
+  'samsung-galaxy-grand-prime-ve-sm-g531f',
+  'samsung-galaxy-note-7',
+  'samsung-galaxy-core-prime',
+  'samsung-galaxy-note-5-sm-n920f',
+  'samsung-galaxy-j3-duos'],
+ 'apple': ['apple-iphone-7',
+  'apple-iphone-6s-plus',
+  'apple-iphone-se',
+  'apple-iphone-6-plus',
+  'apple-iphone-7-plus',
+  'apple-iphone-6s',
+  'apple-iphone-6'],
+ 'huawei': ['huawei-y6-ii-compact',
+  'huawei-honor-7',
+  'huawei-p9-797082',
+  'huawei-mate-9',
+  'huawei-honour-5x',
+  'huawei-y635',
+  'huawei-mate-s',
+  'huawei-y3',
+  'huawei-honor-5x',
+  'huawei-honor-6x',
+  'huawei-gx8',
+  'huawei-ascend-mate-8',
+  'huawei-nova-plus',
+  'huawei-shotx',
+  'huawei-mate-9-pro',
+  'huawei-honor-6-plus',
+  'huawei-honor-4c',
+  'huawei-p9-lite',
+  'huawei-honor-8',
+  'huawei-ascend-mate-7',
+  'huawei-honor-7-lite',
+  'huawei-honor-6',
+  'huawei-honor-5c',
+  'huawei-gr3',
+  'huawei-ascend-g7',
+  'huawei-p8',
+  'huawei-p8-max',
+  'huawei-p9-plus',
+  'huawei-honor-4x',
+  'huawei-p8-lite',
+  'huawei-honor-v8-813632',
+  'huawei-ascend-g620s',
+  'huawei-p10',
+  'huawei-ascend-honor-3c',
+  'huawei-nova',
+  'huawei-p10-plus',
+  'huawei-ascend-y550',
+  'huawei-honor-holly',
+  'huawei-gr5',
+  'huawei-ascend-mate-2',
+  'huawei-p10-lite',
+  'huawei-p8-lite-2017',
+  'huawei-g8',
+  'huawei-y6'],
+ 'xiaomi': ['xiaomi-mi-max',
+  'xiaomi-mi-5s',
+  'xiaomi-redmi-3s',
+  'xiaomi-redmi-note-4',
+  'xiaomi-mi-5',
+  'xiaomi-mi-note-pro',
+  'xiaomi-mi-note',
+  'xiaomi-redmi-pro',
+  'xiaomi-redmi-note-3-pro',
+  'xiaomi-mi-4c',
+  'xiaomi-redmi-note-2',
+  'xiaomi-redmi-3',
+  'xiaomi-mi4s',
+  'xiaomi-redmi-3s-prime',
+  'xiaomi-redmi-3-pro',
+  'xiaomi-redmi-2-pro'],
+ 'htc': ['htc-10',
+  'htc-one-a9-16gb',
+  'htc-one-e9',
+  'htc-one-m8s',
+  'htc-desire-626g',
+  'htc-butterfly-2',
+  'htc-desire-eye-m910x',
+  'htc-one-m9',
+  'htc-desire-530',
+  'htc-one-m9-plus',
+  'htc-desire-526'],
+ 'oneplus': ['oneplus-x', 'oneplus-3t', 'oneplus-3'],
+ 'lg': ['lg-k500n',
+  'lg-k7',
+  'lg-v20-h990',
+  'lg-k10',
+  'lg-leon-4g-lte-h340n',
+  'lg-v10',
+  'lg-x-power',
+  'lg-l-bello',
+  'lg-stylus-2',
+  'lg-k5',
+  'lg-k4',
+  'lg-g6',
+  'lg-g-pro-2',
+  'lg-stylus-2-k520dy',
+  'lg-g4',
+  'lg-g5-titan',
+  'lg-h410',
+  'lg-k8',
+  'lg-g4-stylus-h635',
+  'lg-x-cam-k580',
+  'lg-y50',
+  'lg-g-flex-2',
+  'lg-g5',
+  'lg-h788',
+  'lg-stylus-2-plus',
+  'lg-spirit-c70-h440n',
+  'lg-leon-h320'],
+ 'google': ['google-nexus-5x-h791', 'google-nexus-6p', 'google-pixel-xl'],
+ 'sony': ['sony-xperia-e5',
+  'sony-xperia-z5-premium',
+  'sony-xperia-c5-ultra',
+  'sony-xperia-x-f5121',
+  'sony-xperia-xa-ultra',
+  'sony-xperia-x-performance-f8131',
+  'sony-xperia-z5',
+  'sony-xperia-e4',
+  'sony-xperia-xz',
+  'sony-xperia-z5-compact',
+  'sony-xperia-x-compact',
+  'sony-xperia-x-dual-f5122'],
+ 'zte': ['zte-axon-elite',
+  'zte-zmax-2',
+  'zte-axon-7',
+  'zte-blade-s6-plus',
+  'zte-axon-7-mini-5-2',
+  'zte-axon-mini',
+  'zte-blade-v7',
+  'zte-axon-pro',
+  'zte-blade-v6',
+  'zte-axon'],
+ 'motorola': ['motorola-moto-x-play',
+  'motorola-affinity-plus',
+  'motorola-moto-z-play',
+  'motorola-moto-g5',
+  'motorola-moto-g',
+  'motorola-moto-x-style',
+  'motorola-moto-g-753361',
+  'motorola-moto-g4',
+  'motorola-moto-g3',
+  'motorola-moto-x-force-32gb',
+  'motorola-moto-g5-plus',
+  'motorola-moto-x-1-moto-x1-moto-x-2nd-gen',
+  'motorola-xt1225',
+  'motorola-moto-z-droid',
+  'motorola-moto-x-2',
+  'motorola-moto-g4-play'],
+ 'asus': ['asus-zenfone-2-laser-ze500kl',
+  'asus-zenfone-3',
+  'asus-zenfone-3-deluxe',
+  'asus-zenfone-3-zoom',
+  'asus-zenfone-2-ze551ml',
+  'asus-zenfone-max-zc550kl',
+  'asus-zenfone-3-ultra',
+  'asus-zenfone-go-zc500tg',
+  'asus-zc551kl',
+  'asus-zenfone-3-max',
+  'asus-ze500kl',
+  'asus-ze550kl',
+  'asus-zenfone-2',
+  'asus-zenfone-selfie-zd551kl',
+  'asus-zenfone-2-laser-ze601kl',
+  'asus-zenfone-zoom'],
+ 'vodafone': ['vodafone-smart-prime-6',
+  'vodafone-smart-ultra-6',
+  'vodafone-smart-first-6'],
+ 'microsoft': ['microsoft-lumia-950-xl',
+  'microsoft-lumia-540',
+  'microsoft-lumia-532',
+  'microsoft-lumia-535',
+  'microsoft-lumia-640-dual-sim',
+  'microsoft-lumia-950',
+  'microsoft-lumia-430',
+  'microsoft-lumia-640-xl'],
+ 'lenovo': ['lenovo-k6-dual',
+  'lenovo-vibe-x3',
+  'lenovo-moto-g4-plus',
+  'lenovo-vibe-s1-lite',
+  'lenovo-a6000',
+  'lenovo-k6-power',
+  'lenovo-vibe-p1m',
+  'lenovo-zuk-z2-pro',
+  'lenovo-vibe-shot-crimson',
+  'lenovo-moto-g4-play',
+  'lenovo-k5-note',
+  'lenovo-z2-plus',
+  'lenovo-vibe-p1',
+  'lenovo-zuk-z2',
+  'lenovo-moto-g4',
+  'lenovo-k4-note'],
+ 'blackberry': ['blackberry-leap',
+  'blackberry-priv',
+  'blackberry-passport',
+  'blackberry-dtek60',
+  'blackberry-venice',
+  'blackberry-dtek50'],
+ 'oppo': ['oppo-mirror-5-5-0-540x960',
+  'oppo-f1s',
+  'oppo-f1',
+  'oppo-f1-plus',
+  'oppo-find-7a',
+  'oppo-r7-plus'],
+ 'alcatel': ['alcatel-onetouch-20-04',
+  'alcatel-idol-3',
+  'alcatel-onetouch-pop-3-5015d',
+  'alcatel-idol-3-5-5-6045y',
+  'alcatel-onetouch-pixi-4',
+  'alcatel-one-touch-idol-4s',
+  'alcatel-one-touch-2004c'],
+ 'meizu': ['meizu-m2-note',
+  'meizu-m2',
+  'meizu-pro-5',
+  'meizu-u20',
+  'meizu-mx4',
+  'meizu-mx5',
+  'meizu-pro-6',
+  'meizu-m3-note'],
+ 'wiko': ['wiko-lenny-3', 'wiko-fever'],
+ 'nokia': ['nokia-lumia-735',
+  'nokia-lumia-640-lte',
+  'nokia-lumia-930',
+  'nokia-lumia-830',
+  'nokia-lumia-730'],
+ 'doro': ['doro-liberto-820', 'doro-liberto-820-mini', 'doro-liberto-825'],
+ 'oukitel': ['oukitel-k6000',
+  'oukitel-u7-plus',
+  'oukitel-k10000',
+  'oukitel-k6000-pro',
+  'oukitel-k4000-pro'],
+ 'blu': ['blu-dash-jr-tv', 'blu-studio-c-mini', 'blu-vivo-5r'],
+ 'thl': ['thl-4000'],
+ 'ulefone': ['ulefone-paris'],
+ 'doogee': ['doogee-y6',
+  'doogee-x7-pro',
+  'doogee-y100-valencia-2',
+  'doogee-y100-plus-valencia-2',
+  'doogee-valencia-2-y100-pro',
+  'doogee-homtom-ht6'],
+ 'elephone': ['elephone-p6000-pro', 'elephone-s7', 'elephone-p8000'],
+ 'wileyfox': ['wileyfox-swift'],
+ 'verykool': ['verykool-s5518', 'verykool-t742', 'verykool-s505'],
+ 'karbonn': ['karbonn-a18plus'],
+ 'vivo': ['vivo-v3', 'vivo-y51', 'vivo-v5', 'vivo-v3-max', 'vivo-y55'],
+ 'bq': ['bq-aquaris-e5', 'bq-aquaris-x5'],
+ 'acer': ['acer-liquid-z6-plus', 'acer-liquid-z630'],
+ 'cubot': ['cubot-x17',
+  'cubot-s550',
+  'cubot-x12',
+  'cubot-x16',
+  'cubot-x15',
+  'cubot-note-s'],
+ 'hisense': ['hisense-g610'],
+ 'gionee': ['gionee-f103'],
+ 'tp': ['tp-link-neffos-c5-max'],
+ 'caterpillar': ['caterpillar-s60'],
+ 'supersonic': ['supersonic-sc-150'],
+ 'leagoo': ['leagoo-lead-6'],
+ 'prestigio': ['prestigio-multiphone-5550-duo'],
+ 'runbo': ['runbo-q5', 'runbo-q5s'],
+ 'jiayu': ['jiayu-s3'],
+ 'inew': ['inew-v1'],
+ 'micromax': ['micromax-canvas-hue-aq5000']}
+
+}
+window.onload = function() {
+  var subjectSel = document.getElementById("subject");
+  var topicSel = document.getElementById("topic");
+  var chapterSel = document.getElementById("chapter");
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+  subjectSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    chapterSel.length = 1;
+     topicSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      topicSel.options[topicSel.options.length] = new Option(y, y);
+    }
+  }
+  topicSel.onchange = function() {
+//empty Chapters dropdown
+        chapterSel.length = 1;
+    //display correct values
+    var z = subjectObject[subjectSel.value][this.value];
+    for (var i = 0; i < z.length; i++) {
+      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <title></title>
+    <style>
+#chart {
+    float:left;
+    height: 600px;
+    width: 33%;
+}
+#chart1{
+    float:left;
+
+    width:33%;
+    height:600px;
+}
+#chart2{
+    float:left;
+
+    width:33%;
+    height:600px;
+}
+#chart3{
+    float:left;
+
+    width:33%;
+    height:600px;
+}
+#chart4{
+    float:left;
+
+    width:33%;
+    height:600px;
+}
+#chart5{
+    float:left;
+
+    width:33%;
+    height:600px;
+}
+#chart6{
+    float:left;
+    width:100%;
+    height:600px;
+}
+
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<h1>Product Insights from Customer reviews</h1>
+
+<form name="form1" id="form1" method="POST" >
+Department: <select name="subject" id="subject">
+    <option value="" selected="selected">Select Department</option>
+  </select>
+  <br><br>
+Brand: <select name="topic" id="topic">
+    <option value="" selected="selected">Please select Department first</option>
+  </select>
+  <br><br>
+product: <select name="chapter" id="chapter">
+    <option value="" selected="selected">Please select brand first</option>
+  </select>
+  <br><br>
+  <input type="submit" value="get Insights">
+</form>
+<h6><a href="/">Return to index page</a></h6>
+
+<h1> The product you submitted:</h1>
+    <h1>{{new_var}}</h1>
+<h3>Number of reviews for this product:  {{num_of_review}}</h3>
+
+
+<div id="chart" class="chart" ></div>
+<div id ="chart1" class="chart"></div>
+<div id ="chart2" class="chart"></div>
+<div id ="chart3" class="chart"></div>
+<div id ="chart4" class="chart"></div>
+<div id ="chart5" class="chart"></div>
+<div id ="chart6" class="chart"></div>
+
+
+
+
+<h2>Aspect based Analysis</h2>
+
+{% for your_list_element,aspect in your_list %}
+
+<button type="button" class="collapsible">{{ your_list_element }}</button>
+
+<div class="content">
+
+  <ul>{% for item in aspect %}
+      <li>
+          {{item}}
+      </li>
+      {% endfor %}
+  </ul>
+
+</div>
+
+{% endfor %}
+
+
+
+</body>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs = {{graphJSON | safe}}
+    Plotly.plot('chart',graphs,{});
+</script>
+<script type="text/javascript">
+    var graphs = {{L_graph | safe}}
+    Plotly.plot('chart1',graphs,{});
+</script>
+
+<script type="text/javascript">
+    var graphs = {{D_graph | safe}}
+    Plotly.plot('chart2',graphs,{});
+</script>
+<script type="text/javascript">
+    var graphs = {{R_graph | safe}}
+    Plotly.plot('chart3',graphs,{});
+</script>
+<script type="text/javascript">
+    var graphs = {{RC_graph | safe}}
+    Plotly.plot('chart4',graphs,{});
+</script>
+
+<script type="text/javascript">
+    var graphs = {{sellers_graph | safe}}
+    Plotly.plot('chart5',graphs,{});
+</script>
+
+
+<script type="text/javascript">
+    var graphs = {{geo_graph | safe}}
+    Plotly.plot('chart6',graphs,{});
+</script>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</html>
